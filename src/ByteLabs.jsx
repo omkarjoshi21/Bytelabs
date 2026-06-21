@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import bytelabsIcon from "../assets/bytelabs-icon-hq.png";
-import bytelabsLogo from "../assets/bytelabs-logo-horizontal-hq.png";
+import bytelabsIcon from "./assets/bytelabs-icon-hq.png";
+import bytelabsLogo from "./assets/bytelabs-logo-horizontal-hq.png";
 
 const whatsappNumber = "919028679760";
 const displayPhone = "9028679760";
