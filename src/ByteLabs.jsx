@@ -418,27 +418,31 @@ export default function ByteLabs() {
                 <h2>Ideas made useful.</h2>
               </div>
               <p>
-                A look at what we’re building.
+                A look at what we’re building.{" "}
                 <br />
                 Purposeful products for real workflows.
               </p>
             </div>
             <article className="project" data-reveal>
-              <div className="project-visual">
-                <div className="visual-label">VEDCARE / CLINIC MANAGEMENT</div>
-                <Preview />
-                <span className="mockup-label">ILLUSTRATIVE INTERFACE</span>
+              <div className="project-visual vedcare-visual">
+                <div className="visual-label">VEDCARE / WEBSITE & CLINIC PLATFORM</div>
+                <a href="/projects/vedcare/overview.webp" target="_blank" rel="noopener noreferrer" aria-label="View the VedCare project overview at full size">
+                  <img src="/projects/vedcare/overview.webp" width="1672" height="941" loading="lazy" alt="VedCare overview: public clinic website, online appointment requests and WhatsApp booking, and a doctor workspace for patients, prescriptions, billing and medicine stock. Developed by ByteLabs." />
+                </a>
+                <span className="mockup-label">PROJECT OVERVIEW / VIEW FULL SIZE</span>
               </div>
               <div className="project-copy">
                 <span className="badge live">● Live product</span>
                 <h3>
-                  Better systems.
+                  VedCare.
                   <br />
-                  Better care.
+                  Built around the clinic.
                 </h3>
                 <p>
-                  VedCare brings patient records, appointments, prescriptions,
-                  and billing into one clinic management system.
+                  A public website and clinic management platform for Shrirang
+                  Ayurvedic Clinic & Panchakarma Center. Built by ByteLabs to
+                  bring clinic information, appointment requests, and everyday
+                  practice workflows into one connected experience.
                 </p>
                 <div className="tags">
                   <span>Healthcare</span>
@@ -463,6 +467,45 @@ export default function ByteLabs() {
                 </a>
               </div>
             </article>
+            <details className="vedcare-case-study" data-reveal>
+              <summary>Explore the VedCare project <span aria-hidden="true">+</span></summary>
+              <div className="case-study-body">
+                <div className="case-study-intro">
+                  <div>
+                    <div className="eyebrow">PROJECT / VEDCARE</div>
+                    <h3>From a first visit to the daily workflow.</h3>
+                    <p>A clear online presence for patients, paired with a dedicated doctor interface for clinic operations.</p>
+                  </div>
+                  <dl className="project-facts">
+                    <div><dt>Client</dt><dd>Shrirang Ayurvedic Clinic & Panchakarma Center</dd></div>
+                    <div><dt>Our role</dt><dd>Website design, development & deployment</dd></div>
+                    <div><dt>Status</dt><dd>Live website</dd></div>
+                  </dl>
+                </div>
+                <div className="case-study-features">
+                  <article><h4>Patient-facing website</h4><p>Clinic and doctor information, treatment categories in English and Marathi, and appointment requests with a WhatsApp option.</p></article>
+                  <article><h4>Doctor workspace</h4><p>Navigation for patient records, appointments, follow-ups, prescriptions, medicine stock, and billing.</p></article>
+                  <article><h4>One consistent experience</h4><p>Responsive layouts, clear navigation, and a shared clinic identity across the public website and doctor interface.</p></article>
+                </div>
+                <h4 className="gallery-heading">A closer look</h4>
+                <p className="gallery-note">Public website screens and local doctor-interface previews. The dashboard contains no patient records. Select an image to view it at full size.</p>
+                <div className="vedcare-gallery">
+                  {[
+                    ["home", "Clinic homepage", "Clinic introduction, doctor profile, and appointment links."],
+                    ["appointment", "Appointment requests", "Preferred date and time, patient details, and a WhatsApp booking option."],
+                    ["doctor-login", "Doctor login", "Dedicated clinic access interface. Local preview."],
+                    ["doctor-dashboard", "Doctor dashboard", "Clinic overview and workflow navigation. Local demo with no patient records."],
+                  ].map(([file, title, description]) => (
+                    <figure key={file}>
+                      <a href={`/projects/vedcare/${file}.webp`} target="_blank" rel="noopener noreferrer" aria-label={`View ${title} screenshot in a new tab`}>
+                        <img src={`/projects/vedcare/${file}.webp`} width="1265" height="712" loading="lazy" alt={`${title} — ${description}`} />
+                      </a>
+                      <figcaption><strong>{title}</strong><p>{description}</p></figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </details>
             <article className="project" data-reveal>
               <div className="project-visual puja-visual">
                 <div className="visual-label">
