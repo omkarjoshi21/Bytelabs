@@ -46,3 +46,24 @@ Fonts load from Google Fonts with local system fallbacks. Navigation remains sti
 ## Project signature kit
 
 Open `/brand-kit.html` for logo variants and project footer examples. SVG assets and integration guidance are in `public/brand/`. `src/ProjectCredit.jsx` and `src/ProjectCredit.css` provide a reusable React attribution component. Supply the confirmed public ByteLabs URL when integrating a linked credit into client projects. The clinic footer in the kit is a local visual example.
+# Google Search identity
+
+The canonical public URL is `https://bytelabs-1.onrender.com/`. The homepage includes
+ByteLabs site-name metadata and linked WebSite, Organization (independent studio),
+and Person information for Omkar Joshi. It does not claim legal incorporation or a
+physical business address. Favicons and social sharing images are in `public/`.
+
+After deploying these changes:
+
+1. Confirm `/sitemap.xml`, `/robots.txt`, `/favicon-96.png`, and the Google
+   verification file load on the public website.
+2. Select the ByteLabs property in Search Console. Submit `sitemap.xml` under
+   Sitemaps.
+3. Inspect the homepage, test the live URL, and request indexing once.
+4. Allow Google time to recrawl. A preferred site name, favicon, title, or ranking
+   is not guaranteed. Connect the website from the founder's real public profiles.
+
+If the public domain changes, update the canonical link, structured-data URLs,
+Open Graph URLs, robots.txt, and sitemap.xml together. Brand preview HTML pages
+are marked noindex so they do not compete with the public studio homepage.
+
