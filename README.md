@@ -1,16 +1,44 @@
-# React + Vite
+# ByteLabs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Responsive website for ByteLabs, an independent software studio founded by Omkar Joshi.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Requires Node.js 22.12+ or 24 LTS.
 
-## React Compiler
+```sh
+npm ci
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```sh
+npm run test
+npm run lint
+npm run build
+npm run preview
+```
 
-## Expanding the ESLint configuration
+Deploy the generated `dist` folder to a static host. No server or secrets are required.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Content and contact
+
+- `src/ByteLabs.jsx`: services, projects, founder profile, social links, contact details and inquiry flow.
+- `src/App.css`: layouts, animations and mobile breakpoints.
+- `src/index.css`: global styles and reduced-motion support.
+- `src/assets/omkar-joshi-enhanced.png`: enhanced founder portrait used on the website. The original `omkar-joshi.jpg` is preserved.
+- `index.html`: search and sharing metadata.
+
+The inquiry form validates input and opens a prefilled WhatsApp message or email draft. The visitor must send the message in that app. Email requires a configured email application; WhatsApp requires the service to be available. The website does not submit or store inquiries. Direct email, phone and WhatsApp links remain available.
+
+VedCare is labeled live and links to the supplied website at https://shrirangayurved.com/. A separate demonstration request opens WhatsApp. PurohitSeva is labeled in development. Product visuals are clearly labeled illustrations/concepts and are not actual product screenshots. Founder social links point to Omkar's personal profiles.
+
+Fonts load from Google Fonts with local system fallbacks. Navigation remains sticky without overflow clipping; mobile navigation supports Escape, outside clicks and closing after selection. FAQ uses native keyboard-accessible disclosures. Animations respect reduced-motion preferences; content stays readable without animation support.
+
+## Suggested next steps
+
+1. Add a custom domain and domain-based business email.
+2. Supply actual VedCare screenshots.
+3. Add company social profiles when available, distinct from founder profiles.
+4. Add approved client testimonials or case studies with verified outcomes.
+5. Connect a backend/email provider if direct form delivery is desired; add the corresponding privacy information when data collection begins.
+6. Add an absolute social-preview image and canonical URL once the public domain is known.
