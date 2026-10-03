@@ -42,3 +42,7 @@ Fonts load from Google Fonts with local system fallbacks. Navigation remains sti
 4. Add approved client testimonials or case studies with verified outcomes.
 5. Connect a backend/email provider if direct form delivery is desired; add the corresponding privacy information when data collection begins.
 6. Add an absolute social-preview image and canonical URL once the public domain is known.
+
+## Project signature kit
+
+Open `/brand-kit.html` for logo variants and project footer examples. SVG assets and integration guidance are in `public/brand/`. `src/ProjectCredit.jsx` and `src/ProjectCredit.css` provide a reusable React attribution component. Supply the confirmed public ByteLabs URL when integrating a linked credit into client projects. The clinic footer in the kit is a local visual example.
