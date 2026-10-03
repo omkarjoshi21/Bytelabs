@@ -1,0 +1,14 @@
+.bytelabs-credit { --credit-ink:#203e31; --credit-soft:#58704a; display:inline-flex; align-items:center; gap:12px; color:var(--credit-ink); font-family:Arial,Helvetica,sans-serif; text-decoration:none; max-width:100%; padding:4px; }
+.bytelabs-credit img { width:40px; height:40px; flex-shrink:0; }
+.bytelabs-credit__copy { display:flex; flex-direction:column; gap:3px; }
+.bytelabs-credit__label { font-size:9px; letter-spacing:1.2px; text-transform:uppercase; color:var(--credit-soft); }
+.bytelabs-credit__name { font-size:22px; font-weight:700; letter-spacing:-.8px; line-height:1.1; }
+.bytelabs-credit__name > span { font-weight:400; }
+.bytelabs-credit__name i { font-style:normal; color:var(--credit-soft); }
+.bytelabs-credit__tagline { font-size:10px; color:var(--credit-soft); }
+.bytelabs-credit__arrow { font-size:20px; margin-left:16px; transition:transform .2s; }
+.bytelabs-credit--dark { --credit-ink:#f3eee4; --credit-soft:#c6d4b7; }
+.bytelabs-credit--dark img { border:1px solid #719163; border-radius:10px; }
+ a.bytelabs-credit:hover .bytelabs-credit__arrow { transform:translate(2px,-2px); }
+ a.bytelabs-credit:focus-visible { outline:2px solid var(--credit-soft); outline-offset:5px; border-radius:4px; }
+@media(prefers-reduced-motion:reduce){ .bytelabs-credit__arrow { transition:none; } }

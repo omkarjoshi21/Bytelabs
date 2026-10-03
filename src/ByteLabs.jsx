@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import portrait from "./assets/omkar-joshi-enhanced.png";
+import brandMark from "./assets/bytelabs-mark.svg";
 import "./App.css";
 const email = "joshiomkar104@gmail.com";
 const phone = "919028679760";
@@ -73,7 +74,7 @@ function Brand() {
   return (
     <a className="brand" href="#home" aria-label="ByteLabs home">
       <span className="brand-symbol" aria-hidden="true">
-        b.
+        <img src={brandMark} width="36" height="36" alt="" />
       </span>
       <span>
         byte<span className="brand-light">labs</span>
@@ -545,7 +546,8 @@ export default function ByteLabs() {
                 loading="lazy"
               />
               <div className="portrait-caption">
-                <span>OMKAR JOSHI / BYTELABS</span>
+                <strong>Omkar Joshi</strong>
+                <span>Founder & CEO · ByteLabs</span>
               </div>
             </div>
             <div className="studio-copy" data-reveal>
