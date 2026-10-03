@@ -42,6 +42,31 @@ const services = [
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
+function EmailContact({ prominent = false }) {
+  const [activated, setActivated] = useState(false);
+  const [copied, setCopied] = useState(false);
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+    } catch {
+      setActivated(true);
+    }
+  }
+  return (
+    <div className="email-contact">
+      <a className={prominent ? "contact-email" : undefined} href={`mailto:${email}`} onClick={() => setActivated(true)}>
+        {prominent ? email : "Email"} <Arrow />
+      </a>
+      {activated && <div className="email-fallback">
+        <p role="status">If your email app didn’t open, use Gmail or copy the address.</p>
+        <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`} target="_blank" rel="noopener noreferrer">Open Gmail <Arrow /></a>
+        <button type="button" onClick={copyEmail}>{copied ? "Email copied" : "Copy email"}</button>
+        <span className="email-address">{email}</span>
+      </div>}
+    </div>
+  );
+}
 function ExpertiseStrip() {
   const [paused, setPaused] = useState(false);
   const items = ["Websites", "Web applications", "Business software", "Digital experiences"];
@@ -580,9 +605,7 @@ export default function ByteLabs() {
                 <a href={instagram} target="_blank" rel="noopener noreferrer">
                   Instagram <Arrow />
                 </a>
-                <a href={`mailto:${email}`}>
-                  Email <Arrow />
-                </a>
+                <EmailContact />
               </div>
             </div>
           </div>
@@ -591,7 +614,7 @@ export default function ByteLabs() {
           <div data-reveal>
             <div className="eyebrow">A FEW GOOD QUESTIONS</div>
             <h2>
-              Before we
+              Before we{" "}
               <br />
               get started.
             </h2>
@@ -643,9 +666,7 @@ export default function ByteLabs() {
                 <br />
                 Tell us a little about it. We’ll take it from there.
               </p>
-              <a className="contact-email" href={`mailto:${email}`}>
-                {email} <Arrow />
-              </a>
+              <EmailContact prominent />
               <div className="direct-contact">
                 <a href="tel:+919028679760">+91 90286 79760</a>
                 <span>/</span>
