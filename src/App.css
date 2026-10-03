@@ -1715,3 +1715,14 @@ h2 {
 .portrait-caption { flex-direction: column; align-items: flex-start; gap: 7px; padding: 18px 22px; }
 .portrait-caption strong { font-size: 17px; font-weight: 600; line-height: 1.3; letter-spacing: -.2px; }
 .portrait-caption > span { font-size: 12px; line-height: 1.5; letter-spacing: .3px; color: #c6d4b7; }
+.email-contact { min-width: 0; }
+.email-fallback { margin-top: 12px; max-width: 380px; display: flex; flex-wrap: wrap; gap: 10px; font-size: 13px; }
+.email-fallback p { flex-basis: 100%; margin: 0; line-height: 1.6; }
+.email-fallback button { font: inherit; cursor: pointer; border: 1px solid currentColor; border-radius: 5px; padding: 10px 14px; background: transparent; color: inherit; }
+.email-fallback a { padding: 10px 14px; border: 1px solid currentColor; border-radius: 5px; }
+.email-address { flex-basis: 100%; overflow-wrap: anywhere; }
+.contact-copy .email-fallback { color: #e6eddf; }
+@media (max-width: 640px) {
+  .contact-copy h2 { font-size: clamp(32px, 8vw, 48px); overflow-wrap: break-word; }
+  .direct-contact { flex-wrap: wrap; }
+}
