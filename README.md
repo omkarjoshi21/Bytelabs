@@ -26,6 +26,8 @@ Deploy the generated `dist` folder to a static host. No server or secrets are re
 - `src/App.css`: layouts, animations and mobile breakpoints.
 - `src/index.css`: global styles and reduced-motion support.
 - `src/assets/omkar-joshi-enhanced.png`: enhanced founder portrait used on the website. The original `omkar-joshi.jpg` is preserved.
+- `src/assets/yogesh-gawande.png`: supplied portrait for Yogesh Gawande, Chief Technology Officer (CTO).
+- Add future team members to `teamMembers` in `src/ByteLabs.jsx` with their name, role and imported portrait. Both the dedicated Founder & CEO introduction and the expandable member grid belong to the same “Meet our team” section.
 - `index.html`: search and sharing metadata.
 
 The inquiry form validates input and opens a prefilled WhatsApp message or email draft. The visitor must send the message in that app. Email requires a configured email application; WhatsApp requires the service to be available. The website does not submit or store inquiries. Direct email, phone and WhatsApp links remain available.

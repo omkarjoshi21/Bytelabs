@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import portrait from "./assets/omkar-joshi-enhanced.png";
+import yogeshPortrait from "./assets/yogesh-gawande.png";
 import brandMark from "./assets/bytelabs-mark.svg";
 import "./App.css";
 const email = "joshiomkar104@gmail.com";
@@ -11,7 +12,16 @@ const nav = [
   ["services", "Services"],
   ["work", "Selected work"],
   ["studio", "The studio"],
+  ["team", "Our team"],
   ["contact", "Contact"],
+];
+// Add future colleagues here; the CEO keeps his dedicated profile above the team.
+const teamMembers = [
+  {
+    name: "Yogesh Gawande",
+    role: "Chief Technology Officer (CTO)",
+    image: yogeshPortrait,
+  },
 ];
 const services = [
   [
@@ -423,7 +433,7 @@ export default function ByteLabs() {
                 Purposeful products for real workflows.
               </p>
             </div>
-            <article className="project" data-reveal>
+            <article className="project vedcare-project" data-reveal>
               <div className="project-visual vedcare-visual">
                 <div className="visual-label">VEDCARE / WEBSITE & CLINIC PLATFORM</div>
                 <a href="/projects/vedcare/overview.webp" target="_blank" rel="noopener noreferrer" aria-label="View the VedCare project overview at full size">
@@ -449,6 +459,7 @@ export default function ByteLabs() {
                   <span>Business software</span>
                   <span>Responsive dashboard</span>
                 </div>
+                <div className="project-actions">
                 <a
                   className="text-link"
                   href="https://shrirangayurved.com/"
@@ -465,6 +476,7 @@ export default function ByteLabs() {
                 >
                   Request a VedCare demo <Arrow />
                 </a>
+                </div>
               </div>
             </article>
             <details className="vedcare-case-study" data-reveal>
@@ -603,7 +615,11 @@ export default function ByteLabs() {
             ))}
           </div>
         </section>
-        <section className="studio-section" id="studio">
+        <section className="studio-section" id="studio" aria-labelledby="team-heading">
+          <div className="container team-heading" id="team" data-reveal>
+            <div className="eyebrow">04 / THE PEOPLE BEHIND BYTELABS</div>
+            <h2 id="team-heading">Meet our team.</h2>
+          </div>
           <div className="container studio-grid">
             <div className="founder-image" data-reveal>
               <img
@@ -619,7 +635,7 @@ export default function ByteLabs() {
               </div>
             </div>
             <div className="studio-copy" data-reveal>
-              <div className="eyebrow">04 / MEET THE FOUNDER</div>
+              <div className="eyebrow">MEET OUR FOUNDER & CEO</div>
               <h2>
                 Built with care.
                 <br />
@@ -631,7 +647,7 @@ export default function ByteLabs() {
                 business software.
               </p>
               <p>
-                You work directly with the person building your product. That
+                You work directly with the team building your product. That
                 means a closer understanding of your goals, considered
                 decisions, and attention to the details.
               </p>
@@ -652,15 +668,25 @@ export default function ByteLabs() {
               </div>
             </div>
           </div>
+          <div className="container team-members">
+          <h3 className="team-members-heading">Team members</h3>
+          <div className="team-grid">
+            {teamMembers.map((member) => (
+              <article className="team-card" key={member.name} data-reveal>
+                <img src={member.image} alt={member.name} width="1254" height="1254" loading="lazy" />
+                <div className="team-card-copy">
+                  <h3>{member.name}</h3>
+                  <p>{member.role}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          </div>
         </section>
-        <section className="section container faq-section">
+        <section className="section container faq-section" id="faq" aria-labelledby="faq-heading">
           <div data-reveal>
             <div className="eyebrow">A FEW GOOD QUESTIONS</div>
-            <h2>
-              Before we{" "}
-              <br />
-              get started.
-            </h2>
+            <h2 id="faq-heading">Before we get started.</h2>
           </div>
           <div className="faq-list" data-reveal>
             {[
