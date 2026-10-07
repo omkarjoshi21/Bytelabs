@@ -15,11 +15,18 @@ const nav = [
   ["team", "Our team"],
   ["contact", "Contact"],
 ];
-// Add future colleagues here; the CEO keeps his dedicated profile above the team.
+// Keep team profiles together in one compact introduction.
 const teamMembers = [
   {
+    name: "Omkar Joshi",
+    role: "Founder & CEO",
+    image: portrait,
+    linkedin,
+    instagram,
+  },
+  {
     name: "Yogesh Gawande",
-    role: "Chief Technology Officer (CTO)",
+    role: "Chief Technology Officer",
     image: yogeshPortrait,
   },
 ];
@@ -619,68 +626,24 @@ export default function ByteLabs() {
           <div className="container team-heading" id="team" data-reveal>
             <div className="eyebrow">04 / THE PEOPLE BEHIND BYTELABS</div>
             <h2 id="team-heading">Meet our team.</h2>
+            <p>Work directly with the people shaping and building your product.</p>
           </div>
-          <div className="container studio-grid">
-            <div className="founder-image" data-reveal>
-              <img
-                src={portrait}
-                alt="Omkar Joshi, Founder and CEO of ByteLabs"
-                width="1114"
-                height="1412"
-                loading="lazy"
-              />
-              <div className="portrait-caption">
-                <strong>Omkar Joshi</strong>
-                <span>Founder & CEO · ByteLabs</span>
-              </div>
-            </div>
-            <div className="studio-copy" data-reveal>
-              <div className="eyebrow">MEET OUR FOUNDER & CEO</div>
-              <h2>
-                Built with care.
-                <br />
-                <span>Led with purpose.</span>
-              </h2>
-              <p>
-                ByteLabs is an independent software studio founded by Omkar
-                Joshi, focused on websites, web applications, and practical
-                business software.
-              </p>
-              <p>
-                You work directly with the team building your product. That
-                means a closer understanding of your goals, considered
-                decisions, and attention to the details.
-              </p>
-              <div className="founder-signature">
-                <div>
-                  <strong>Omkar Joshi</strong>
-                  <span>Founder & CEO · ByteLabs</span>
-                </div>
-              </div>
-              <div className="social-links">
-                <a href={linkedin} target="_blank" rel="noopener noreferrer">
-                  LinkedIn <Arrow />
-                </a>
-                <a href={instagram} target="_blank" rel="noopener noreferrer">
-                  Instagram <Arrow />
-                </a>
-                <EmailContact />
-              </div>
-            </div>
-          </div>
-          <div className="container team-members">
-          <h3 className="team-members-heading">Team members</h3>
-          <div className="team-grid">
+          <div className="container leadership-grid">
             {teamMembers.map((member) => (
-              <article className="team-card" key={member.name} data-reveal>
-                <img src={member.image} alt={member.name} width="1254" height="1254" loading="lazy" />
-                <div className="team-card-copy">
+              <article className="leadership-card" key={member.name} data-reveal>
+                <img src={member.image} alt={member.name} width="160" height="180" loading="lazy" />
+                <div className="leadership-copy">
                   <h3>{member.name}</h3>
                   <p>{member.role}</p>
+                  {member.linkedin && (
+                    <div className="leadership-links">
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on LinkedIn`}>LinkedIn <Arrow /></a>
+                      <a href={member.instagram} target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on Instagram`}>Instagram <Arrow /></a>
+                    </div>
+                  )}
                 </div>
               </article>
             ))}
-          </div>
           </div>
         </section>
         <section className="section container faq-section" id="faq" aria-labelledby="faq-heading">
