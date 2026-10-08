@@ -113,7 +113,6 @@ function Brand() {
       </span>
       <span>
         byte<span className="brand-light">labs</span>
-        <span className="brand-dot">.</span>
       </span>
     </a>
   );
