@@ -12,7 +12,7 @@ it('publishes consistent ByteLabs and founder identity with accessible crawl ass
   expect(founder.name).toBe('Omkar Joshi');
   expect(studio.founder['@id']).toBe(founder['@id']);
   expect(html).toContain(`rel="canonical" href="${site.url}"`);
-  expect(html).toContain('<title>ByteLabs | Websites & Software by Omkar Joshi</title>');
+  expect(html).toContain('<title>ByteLabs | Websites & Software</title>');
   expect(readFileSync('public/sitemap.xml', 'utf8')).toContain(`<loc>${site.url}</loc>`);
   expect(readFileSync('public/robots.txt', 'utf8')).toContain(`Sitemap: ${site.url}sitemap.xml`);
   expect(readFileSync('public/googlef77ffa24419a8dda.html', 'utf8').trim()).toBe('google-site-verification: googlef77ffa24419a8dda.html');
